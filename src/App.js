@@ -1,7 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function App() {
   const [activeCalc, setActiveCalc] = useState("loan");
+
+  // ✅ Load AdSense dynamically (safe for React)
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src =
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9310322951298844";
+    script.crossOrigin = "anonymous";
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center px-4 py-8">
@@ -35,17 +45,49 @@ export default function App() {
         ))}
       </nav>
 
-      <div className="bg-white p-6 rounded-2xl shadow-md w-full max-w-md">
+      {/* ✅ Inline AdSense Banner under navigation */}
+      <AdBanner />
+
+      <div className="bg-white p-6 rounded-2xl shadow-md w-full max-w-md mt-6">
         {activeCalc === "loan" && <LoanCalculator />}
         {activeCalc === "savings" && <SavingsCalculator />}
         {activeCalc === "investment" && <InvestmentCalculator />}
         {activeCalc === "mortgage" && <MortgageCalculator />}
       </div>
 
+      {/* ✅ Another AdSense banner near bottom for higher RPM */}
+      <div className="mt-10">
+        <AdBanner />
+      </div>
+
       <footer className="mt-8 text-gray-500 text-sm text-center">
         © {new Date().getFullYear()} Finance Calculators. Built with ❤️ using React + Tailwind.
       </footer>
     </div>
+  );
+}
+
+/* ========== AdSense Banner Component ========== */
+function AdBanner() {
+  useEffect(() => {
+    try {
+      if (window.adsbygoogle && Array.isArray(window.adsbygoogle)) {
+        window.adsbygoogle.push({});
+      }
+    } catch (e) {
+      console.error("AdSense error:", e);
+    }
+  }, []);
+
+  return (
+    <ins
+      className="adsbygoogle block my-4"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-9310322951298844"
+      data-ad-slot="1234567890"   // 👉 Replace this with your AdSense slot ID
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
   );
 }
 
