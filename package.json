@@ -2,6 +2,9 @@
   "name": "finance-calculators",
   "version": "0.1.0",
   "private": true,
+  "description": "Free online finance calculators for loans, savings, investments, and mortgages. Built with React + Tailwind CSS for modern performance and SEO.",
+  "author": "Finance Calculators Team",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -11,15 +14,23 @@
     "lucide-react": "^0.545.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-scripts": "5.0.1",
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^7.6.0",
+    "react-scripts": "^5.0.1",
     "recharts": "^3.2.1",
+    "serve": "^14.2.3",
+    "sitemap": "^7.1.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node scripts/generate-sitemap.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "serve": "serve -s build",
+    "predeploy": "npm run build && npm run generate-sitemap",
+    "deploy": "npm run predeploy && vercel --prod"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +54,18 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18"
-  }
+  },
+  "keywords": [
+    "finance",
+    "calculator",
+    "loan",
+    "investment",
+    "mortgage",
+    "savings",
+    "react",
+    "tailwind",
+    "financial-tools",
+    "money"
+  ],
+  "homepage": "https://finance-calculators.vercel.app"
 }
