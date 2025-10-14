@@ -2,28 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Finance Calculators | Smart Loan, Savings & Investment Tools</title>
+    <title>Finance Calculators | Loans, Savings, ROI & Investment Tools</title>
 
-    <!-- ✅ SEO Meta -->
+    <!-- ✅ SEO Essentials -->
     <meta
       name="description"
-      content="Free online finance calculators for loans, savings, investments, and mortgages. Make smarter money decisions with accurate results."
+      content="Professional-grade online finance calculators for loans, savings, investments, ROI, and mortgages. Fast, accurate, and mobile-friendly tools for smarter money management."
     />
     <meta
       name="keywords"
-      content="finance calculator, loan calculator, savings calculator, investment calculator, ROI calculator, debt to income, mortgage calculator"
+      content="finance calculator, loan calculator, savings calculator, investment calculator, ROI calculator, debt to income, mortgage calculator, credit card payoff"
     />
     <meta name="author" content="Finance Calculators" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://financecalc-demo.vercel.app/" />
 
-    <!-- ✅ Open Graph (for social sharing) -->
+    <!-- ✅ Preload critical connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+
+    <!-- ✅ Favicons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ✅ Open Graph -->
     <meta property="og:title" content="Finance Calculators" />
     <meta
       property="og:description"
-      content="Smart tools for loans, savings, investments, and mortgages — plan your financial future with ease."
+      content="Free, accurate calculators for financial planning — loans, savings, investments, ROI and more."
     />
     <meta property="og:url" content="https://financecalc-demo.vercel.app/" />
     <meta property="og:type" content="website" />
@@ -34,7 +49,7 @@
     <meta name="twitter:title" content="Finance Calculators" />
     <meta
       name="twitter:description"
-      content="Accurate online finance calculators — loan, savings, and investment tools for smarter planning."
+      content="Accurate online finance tools — loan, savings, and investment calculators."
     />
     <meta name="twitter:image" content="/finance-banner.png" />
 
@@ -59,14 +74,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- ✅ Schema.org JSON-LD (Structured Data) -->
+    <!-- ✅ Schema.org Structured Data (for Google Rich Results) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Finance Calculators",
         "url": "https://financecalc-demo.vercel.app/",
-        "description": "Free financial calculators for loans, savings, investments, ROI, and mortgages.",
+        "description": "Free online financial calculators for loans, investments, ROI, and mortgages.",
         "publisher": {
           "@type": "Organization",
           "name": "Finance Calculators",
@@ -75,17 +90,87 @@
             "url": "https://financecalc-demo.vercel.app/finance-banner.png"
           }
         },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://financecalc-demo.vercel.app/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "hasPart": [
+          {
+            "@type": "WebPage",
+            "name": "Loan Calculator",
+            "url": "https://financecalc-demo.vercel.app/loan-calculator",
+            "description": "Calculate monthly payments, total interest, and loan payoff schedules."
+          },
+          {
+            "@type": "WebPage",
+            "name": "Savings Calculator",
+            "url": "https://financecalc-demo.vercel.app/savings-calculator",
+            "description": "Estimate how your savings will grow over time with compound interest."
+          },
+          {
+            "@type": "WebPage",
+            "name": "Investment Calculator",
+            "url": "https://financecalc-demo.vercel.app/investment-calculator",
+            "description": "Project future investment growth with annual return rates."
+          },
+          {
+            "@type": "WebPage",
+            "name": "Mortgage Calculator",
+            "url": "https://financecalc-demo.vercel.app/mortgage-calculator",
+            "description": "Estimate monthly mortgage payments and total interest cost."
+          },
+          {
+            "@type": "WebPage",
+            "name": "ROI Calculator",
+            "url": "https://financecalc-demo.vercel.app/roi-calculator",
+            "description": "Calculate Return on Investment percentage based on profit and cost."
+          },
+          {
+            "@type": "WebPage",
+            "name": "Debt-to-Income Calculator",
+            "url": "https://financecalc-demo.vercel.app/debt-to-income-calculator",
+            "description": "Analyze your debt-to-income ratio to assess loan eligibility."
+          },
+          {
+            "@type": "WebPage",
+            "name": "Credit Card Payoff Calculator",
+            "url": "https://financecalc-demo.vercel.app/credit-card-payoff-calculator",
+            "description": "Estimate how long it will take to pay off your credit card debt."
+          }
+        ]
       }
     </script>
+
+    <!-- ✅ Performance Optimization -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: radial-gradient(circle at top, #eef4ff, #fdfdfd);
+        color: #222;
+      }
+    </style>
   </head>
 
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <noscript>
+      <p style="text-align:center;color:#444;margin-top:50px;">
+        You need to enable JavaScript to run this app.
+      </p>
+    </noscript>
+    <div id="root" role="main"></div>
+
+    <!-- ✅ Lazy-load Ads or external scripts only after user interaction -->
+    <script>
+      window.addEventListener("scroll", () => {
+        if (!window.lazyAdsLoaded) {
+          const s = document.createElement("script");
+          s.src =
+            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+          s.async = true;
+          document.body.appendChild(s);
+          window.lazyAdsLoaded = true;
+        }
+      });
+    </script>
   </body>
 </html>
