@@ -1,6 +1,5 @@
 # robots.txt for Finance Calculators
-# Learn more: https://www.robotstxt.org/robotstxt.html
-# Last updated: 2025-10-12
+# Updated: 2025-10-12
 
 User-agent: *
 Allow: /
@@ -8,11 +7,11 @@ Disallow: /private/
 Disallow: /temp/
 Disallow: /admin/
 
-# ✅ Explicitly allow Google AdSense crawler
+# ✅ Allow Google AdSense crawler
 User-agent: Mediapartners-Google
 Allow: /
 
-# ✅ Crawl delay for less aggressive bots
+# ✅ Crawl delay for server protection
 Crawl-delay: 5
 
 # ✅ Sitemap reference
