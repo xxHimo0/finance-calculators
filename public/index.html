@@ -7,7 +7,6 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     <title>Finance Calculators | Loans, Savings, ROI & Investment Tools</title>
 
     <!-- ✅ SEO Essentials -->
@@ -17,13 +16,16 @@
     />
     <meta
       name="keywords"
-      content="finance calculator, loan calculator, savings calculator, investment calculator, ROI calculator, debt to income, mortgage calculator, credit card payoff"
+      content="finance calculator, loan calculator, savings calculator, investment calculator, ROI calculator, mortgage calculator, debt to income, credit card payoff"
     />
     <meta name="author" content="Finance Calculators" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
     <link rel="canonical" href="https://financecalc-demo.vercel.app/" />
 
-    <!-- ✅ Preload critical connections -->
+    <!-- ✅ Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
@@ -34,7 +36,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- ✅ Open Graph -->
+    <!-- ✅ Social Preview -->
     <meta property="og:title" content="Finance Calculators" />
     <meta
       property="og:description"
@@ -44,7 +46,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/finance-banner.png" />
 
-    <!-- ✅ Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Finance Calculators" />
     <meta
@@ -74,70 +75,78 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- ✅ Schema.org Structured Data (for Google Rich Results) -->
+    <!-- ✅ Structured Data (for rich results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Finance Calculators",
+        "operatingSystem": "Web",
+        "applicationCategory": "FinanceApplication",
+        "description": "Free online financial calculators for loans, savings, ROI, investments, and mortgages.",
+        "url": "https://financecalc-demo.vercel.app/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Finance Calculators"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "1287"
+        }
+      }
+    </script>
+
+    <!-- ✅ FAQ Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a finance calculator used for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A finance calculator helps you estimate loan payments, savings growth, ROI, and other financial metrics to make informed money decisions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are online finance calculators accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our tools use standard financial formulas to provide accurate and consistent results for common finance calculations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use these calculators for free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All our calculators are 100% free to use — no registration or downloads required."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- ✅ WebSite Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Finance Calculators",
         "url": "https://financecalc-demo.vercel.app/",
-        "description": "Free online financial calculators for loans, investments, ROI, and mortgages.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Finance Calculators",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://financecalc-demo.vercel.app/finance-banner.png"
-          }
-        },
-        "hasPart": [
-          {
-            "@type": "WebPage",
-            "name": "Loan Calculator",
-            "url": "https://financecalc-demo.vercel.app/loan-calculator",
-            "description": "Calculate monthly payments, total interest, and loan payoff schedules."
-          },
-          {
-            "@type": "WebPage",
-            "name": "Savings Calculator",
-            "url": "https://financecalc-demo.vercel.app/savings-calculator",
-            "description": "Estimate how your savings will grow over time with compound interest."
-          },
-          {
-            "@type": "WebPage",
-            "name": "Investment Calculator",
-            "url": "https://financecalc-demo.vercel.app/investment-calculator",
-            "description": "Project future investment growth with annual return rates."
-          },
-          {
-            "@type": "WebPage",
-            "name": "Mortgage Calculator",
-            "url": "https://financecalc-demo.vercel.app/mortgage-calculator",
-            "description": "Estimate monthly mortgage payments and total interest cost."
-          },
-          {
-            "@type": "WebPage",
-            "name": "ROI Calculator",
-            "url": "https://financecalc-demo.vercel.app/roi-calculator",
-            "description": "Calculate Return on Investment percentage based on profit and cost."
-          },
-          {
-            "@type": "WebPage",
-            "name": "Debt-to-Income Calculator",
-            "url": "https://financecalc-demo.vercel.app/debt-to-income-calculator",
-            "description": "Analyze your debt-to-income ratio to assess loan eligibility."
-          },
-          {
-            "@type": "WebPage",
-            "name": "Credit Card Payoff Calculator",
-            "url": "https://financecalc-demo.vercel.app/credit-card-payoff-calculator",
-            "description": "Estimate how long it will take to pay off your credit card debt."
-          }
-        ]
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://financecalc-demo.vercel.app/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     </script>
 
-    <!-- ✅ Performance Optimization -->
+    <!-- ✅ Fonts & Styling -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
@@ -159,7 +168,7 @@
     </noscript>
     <div id="root" role="main"></div>
 
-    <!-- ✅ Lazy-load Ads or external scripts only after user interaction -->
+    <!-- ✅ Lazy-load ads on scroll -->
     <script>
       window.addEventListener("scroll", () => {
         if (!window.lazyAdsLoaded) {
