@@ -1,20 +1,19 @@
 # robots.txt for Finance Calculators
 # Learn more: https://www.robotstxt.org/robotstxt.html
+# Last updated: 2025-10-12
 
 User-agent: *
 Allow: /
 Disallow: /private/
-Disallow: /admin/
 Disallow: /temp/
+Disallow: /admin/
 
-# Sitemap for search engines
-Sitemap: https://financecalc-demo.vercel.app/sitemap.xml
-
-# Helpful crawl delay for certain bots (optional but polite)
-Crawl-delay: 5
-
-# Explicit permission for Google Ads and Media Partners
+# ✅ Explicitly allow Google AdSense crawler
 User-agent: Mediapartners-Google
 Allow: /
 
-# Last updated: 2025-10-12
+# ✅ Crawl delay for less aggressive bots
+Crawl-delay: 5
+
+# ✅ Sitemap reference
+Sitemap: https://financecalc-demo.vercel.app/sitemap.xml
